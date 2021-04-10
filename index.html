@@ -5,146 +5,170 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/main.js"></script>
     <title>Shop</title>
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li><a href="#"><img src="img/logo-icon.svg" alt="logo"></a></li>
-            <li><button><img src="img/search-icon.svg" alt="search"></button></li>
-        </ul>
-        <ul>
-            <li><button><img src="img/burger-icon.svg" alt="menu"></button></li>
-            <li><a href="#"><img src="img/profile-icon.svg" alt="my-profile"></a></li>
-            <li><a href="#"><img src="img/basket-icon.svg" alt="basket"></a></li>
-        </ul>
-        <nav>
-            <div>menu</div>
-            <div>
-                <div>man</div>
-                <div>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Bags</a></li>
-                        <li><a href="#">Denim</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                    </ul>
+    <header class="header">
+        <div class="container">
+            <ul class="header__list">
+                <div class="header__list__item">
+                    <li class="header__list__item__logo"><a href="#"><img src="./img/logo-icon.svg" alt="logo"></a></li>
+                    <li><button><img src="./img/search-icon.svg" alt="search"></button></li>
                 </div>
-            </div>
-            <div>
-                <div>woman</div>
-                <div>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Jackets & Coats</a></li>
-                        <li><a href="#">Polos</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shirts</a></li>
-                    </ul>
+                <div class="header__list__item">
+                    <li><button class="burger"><img src="./img/burger-icon.svg" alt="menu"></button></li>
+                    <li><a href="#"><img src="./img/profile-icon.svg" alt="my-profile"></a></li>
+                    <li><a href="#"><img src="./img/basket-icon.svg" alt="basket"></a></li>
                 </div>
-            </div>
-            <div>
-                <div>kids</div>
-                <div>
-                    <ul>
-                        <li><a href="#">Accessories</a></li>
-                        <li><a href="#">Jackets & Coats</a></li>
-                        <li><a href="#">Polos</a></li>
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Bags</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </ul>
+        </div>
     </header>
+    <nav class="navigation visually-hidden">
+        <div class="navigation__close"><img src="./img/close.svg" alt="close"></div>
+        <div class="navigation__heading">menu</div>
+        <div class="navigation__title">man</div>
+        <ul class="navigation__list">
+            <li class="navigation__list__item"><a href="#">Accessories</a></li>
+            <li class="navigation__list__item"><a href="#">Bags</a></li>
+            <li class="navigation__list__item"><a href="#">Denim</a></li>
+            <li class="navigation__list__item"><a href="#">T-Shirts</a></li>
+        </ul>
+        <div class="navigation__title">woman</div>
+        <ul class="navigation__list">
+            <li class="navigation__list__item"><a href="#">Accessories</a></li>
+            <li class="navigation__list__item"><a href="#">Jackets & Coats</a></li>
+            <li class="navigation__list__item"><a href="#">Polos</a></li>
+            <li class="navigation__list__item"><a href="#">T-Shirts</a></li>
+            <li class="navigation__list__item"><a href="#">Shirts</a></li>
+        </ul>
+        <div class="navigation__title">kids</div>
+        <ul class="navigation__list">
+            <li class="navigation__list__item"><a href="#">Accessories</a></li>
+            <li class="navigation__list__item"><a href="#">Jackets & Coats</a></li>
+            <li class="navigation__list__item"><a href="#">Polos</a></li>
+            <li class="navigation__list__item"><a href="#">T-Shirts</a></li>
+            <li class="navigation__list__item"><a href="#">Shirts</a></li>
+            <li class="navigation__list__item"><a href="#">Bags</a></li>
+        </ul>
+    </nav>
     <main>
-        <section>
-            <h1>the brand <span>of luxerious </span><span>fashion</span></h1>
-            <img src="img/man.jpg" alt="fashion">
+        <section class="promo">
+            <img class="promo__img" src="./img/man.png" alt="fashion">
+            <h1 class="promo__title">the brand<br><span class="promo__subtitle">of luxerious<span
+                        class="promo__subtitle--rose"> fashion</span></span></h1>
         </section>
-        <section>
-            <h2>Categories</h2>
-            <div>
-                <div>
-                    <a href="#">
-                        <div><img src="img/for-woman.jpg" alt="for-woman"></div>
-                        <div>30% off <span>for woman</span></div>
+        <section class="categories container">
+            <h2 class="categories__title visually-hidden">Categories</h2>
+            <ul class="categories__list">
+                <li class="categories__list__item woman">
+                    <a class="categories__list__item__link" href="#">
+                        <p class="categories__list__item__link__title">30% off <br><span
+                                class="categories__list__item__link__subtitle">for woman</span></p>
                     </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <div><img src="img/for-man.jpg" alt="for-man"></div>
-                        <div>hot deal <span>for man</span></div>
+                </li>
+                <li class="categories__list__item man">
+                    <a class="categories__list__item__link" href="#">
+                        <p class="categories__list__item__link__title">hot deal <br><span
+                                class="categories__list__item__link__subtitle">for man</span></p>
                     </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <div><img src="img/for-kids.jpg" alt="for-kids"></div>
-                        <div>new arrivals <span>for kids</span></div>
+                </li>
+                <li class="categories__list__item kids">
+                    <a class="categories__list__item__link" href="#">
+                        <p class="categories__list__item__link__title">new arrivals<br><span
+                                class="categories__list__item__link__subtitle">for kids</span></p>
                     </a>
-                </div>
-            </div>
-            <div>
-                <a href="#">
-                    <div><img src="img/accesories.jpg" alt="accesories"></div>
-                    <div>luxirous & trendy <span>accesories</span></div>
-                </a>
+                </li>
+                <li class="categories__list__item accesories">
+                    <a class="categories__list__item__link" href="#">
+                        <p class="categories__list__item__link__title">luxirous & trendy<br><span
+                                class="categories__list__item__link__subtitle">accesories</span></p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="products container">
+            <h2 class="products__title">Fetured Items</h2>
+            <h3 class="products__subtitle">Shop for items based on what we featured in this week</h3>
+            <ul class="products__list">
+            </ul>
+            <button class="products__view__all">Browse All Product</button>
+        </section>
+        <section class="advantages">
+            <h2 class="advantages__title visually-hidden">advantages</h2>
+            <div class="container">
+                <ul class="advantages__list">
+                    <li class="advantages__item">
+                        <img class="advantages__item__img" src="img/free-delivery.svg" alt="free-delivery">
+                        <h3 class="advantages__item__title">Free Delivery</h3>
+                        <p class="advantages__item__desc">Worldwide delivery on all. Authorit tively morph
+                            next-generation innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <img class="advantages__item__img" src="img/sales-discount.svg" alt="sales-discount">
+                        <h3 class="advantages__item__title">Sales & discounts</h3>
+                        <p class="advantages__item__desc">Worldwide delivery on all. Authorit tively morph
+                            next-generation innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                    <li class="advantages__item">
+                        <img class="advantages__item__img" src="img/quality-assurance.svg" alt="quality-assurance">
+                        <h3 class="advantages__item__title">Quality assurance</h3>
+                        <p class="advantages__item__desc">Worldwide delivery on all. Authorit tively morph
+                            next-generation innov tion with extensive
+                            models.
+                        </p>
+                    </li>
+                </ul>
             </div>
         </section>
-        <section>
-            <h2>Fetured Items</h2>
-            <h3>Shop for items based on what we featured in this week</h3>
-            <div class="products">
-            </div>
-            <button>Browse All Product</button>
-        </section>
-        <section>
-            <h2>advantages</h2>
-            <div>
-                <img src="img/free-delivery.svg" alt="free-delivery">
-                <h3>Free Delivery</h3>
-                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </p>
-            </div>
-            <div>
-                <img src="img/sales-discount.svg" alt="sales-discount">
-                <h3>Sales & discounts</h3>
-                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </p>
-            </div>
-            <div>
-                <img src="img/quality-assurance.svg" alt="quality-assurance">
-                <h3>Quality assurance</h3>
-                <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.
-                </p>
-            </div>
-        </section>
-        <section>
-            <h2>form</h2>
-            <div>
-                <img src="img/intersect.png" alt="intersect">
-                <p>“Vestibulum quis porttitor dui! <span>Quisque viverra nunc mi, a pulvinar purus condimentum“</span>
-                </p>
-            </div>
-            <div>
-                <h2>subscribe <span>for our newletter and promotion</span></h2>
-                <input type="text" placeholder="Enter Your Email">
-                <button>Subscribe</button>
+        <section class="subscribe">
+            <div class="container">
+                <h2 class="subscribe__title visually-hidden">form</h2>
+                <ul class="subscribe__list">
+                    <li class="subscribe__item left">
+                        <img src="img/intersect.png" alt="intersect">
+                        <p class="subscribe__item__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                            <span class="subscribe__item__subtext">a pulvinar purus condimentum“</span>
+                        </p>
+                    </li>
+                    <li class="subscribe__item right">
+                        <h2 class="subscribe__item__title">subscribe<br><span class="subscribe__item__subtitle">for our
+                                newletter and promotion</span></h2>
+                        <div class="subscribe__form">
+                            <input class="subscribe__form__mail" type="text" placeholder="Enter Your Email">
+                            <button class="subscribe__form__btn">Subscribe</button>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
-    <footer>
-        <div>© 2021 Brand All Rights Reserved.</div>
-        <div>
-            <ul>
-                <li><a href="#"><img src="img/social-icon/fb.svg" alt="facebook"></a></li>
-                <li><a href="#"><img src="img/social-icon/instagram.svg" alt="instagram"></a></li>
-                <li><a href="#"><img src="img/social-icon/pinterest.svg" alt="pinterest"></a></li>
-                <li><a href="#"><img src="img/social-icon/twitter.svg" alt="twitter"></a></li>
-            </ul>
+    <footer class="footer">
+        <div class="footer__wrap container">
+            <div class="copyright">© 2021 Brand All Rights Reserved.</div>
+            <div>
+                <ul class="social-icon__list">
+                    <li class="social-icon__list__link"><a href="#"><img src="img/social-icon/fb.svg"
+                                alt="facebook"></a></li>
+                    <li class="social-icon__list__link"><a href="#"><img src="img/social-icon/instagram.svg"
+                                alt="instagram"></a></li>
+                    <li class="social-icon__list__link"><a href="#"><img src="img/social-icon/pinterest.svg"
+                                alt="pinterest"></a></li>
+                    <li class="social-icon__list__link"><a href="#"><img src="img/social-icon/twitter.svg"
+                                alt="twitter"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>
