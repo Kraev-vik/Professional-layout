@@ -1,0 +1,71 @@
+.subscribe {
+    background-image: url(../img/subscribe-bg.jpg);
+
+    &__list {
+        @include flex (space-around, unset);
+        min-height: 448px;
+    }
+
+    &__item {
+        width: 360px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        &.quote {
+            margin-top: 97px;
+        }
+
+        &.frm {
+            margin-top: 150px;
+        }
+    }
+
+    &__text {
+        @include font ($size-l, $weight-s, $line-height-l);
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    &__subtext {
+        font-style: italic;
+    }
+
+    &__title {
+        @include font ($size-xl, $weight-m, $line-height-xl, $black, uppercase);
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &__form {
+        margin-top: 32px;
+        display: flex;
+
+        &-mail {
+            width: 224px;
+            height: 48px;
+            padding: 0 0 0 24px;
+            border-radius: 24px 0 0 24px;
+            border: none;
+            margin: 0;
+            background-color: $grey-sub;
+            outline: none;
+        }
+
+        &-btn {
+            @include font ($size-s, $weight-s, $line-height-s, $white);
+            width: 100px;
+            height: 48px;
+            background-color: $dark-rose;
+            border-radius: 0 24px 24px 0;
+            border: none;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

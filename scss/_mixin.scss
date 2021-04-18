@@ -1,0 +1,20 @@
+@mixin font ($font-size: $size-s, $font-weight: $weight-s, $line-height: $line-height-s, $color:$black, $text-transform: none) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    color: $color;
+    text-transform: $text-transform;
+}
+
+@mixin absolute ($top:auto, $width:auto, $height:auto) {
+    position: absolute;
+    top: $top;
+    width: $width;
+    height: $height;
+}
+
+@mixin flex ($justify-content: space-between, $gap: 30px) {
+    display: flex;
+    justify-content: $justify-content;
+    gap: $gap;
+}

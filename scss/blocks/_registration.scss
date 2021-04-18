@@ -1,0 +1,120 @@
+.reg {
+
+    &__promo {
+        background-color: $rose;
+        min-height: 148px;
+
+        &-title {
+            @include font ($size-xl, $weight-s, 148px, $dark-rose, uppercase);
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        column-gap: 128px;
+        padding: 65px 0 96px 0;
+    }
+
+    &__form {
+
+        &-title {
+            @include font ($size-m, $weight-xs, $line-height-m);
+        }
+
+        & [type="text"],
+        & [type="email"],
+        & [type="password"] {
+            width: 360px;
+            height: 45px;
+            margin-top: 20px;
+            font-family: $site-font;
+
+            &::placeholder,
+            &::placeholder,
+            &::placeholder {
+                @include font ($size-xs, $weight-xs, $line-height-xs, $grey);
+                padding-left: 17px;
+            }
+        }
+
+        & [type="radio"] {
+            position: relative;
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+            margin: 0;
+
+            &:checked {
+                color: $dark-rose;
+                appearance: none;
+                padding: 2px;
+                border: 1px solid $dark-rose;
+                border-radius: 50%;
+                outline: none;
+
+                &:before {
+                    content: '';
+                    @include absolute (2px, 11px, 11px);
+                    left: 2px;
+                    border-radius: 50%;
+                    background-color: $dark-rose;
+                }
+            }
+        }
+
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-choice {
+            padding: 31px 0 33px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        & button {
+            width: 167px;
+            height: 50px;
+            color: $white;
+            background: url(../img/join-now.svg) no-repeat right 20px center $dark-rose;
+            border: none;
+            text-transform: uppercase;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+    }
+
+    &__label {
+        @include font (11px, $weight-xs, 13px);
+        padding-left: 10px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &-form__text-pass {
+        @include font ($size-xs, $weight-xs, $line-height-xs, $grey);
+        width: 360px;
+        padding: 15px 0 40px 0;
+        text-align: justify;
+    }
+}
+
+.loyalty {
+
+    &__title {
+        @include font ($size-xl, $weight-xs, $line-height-xl, $black, uppercase);
+    }
+
+    &__text {
+        @include font ($size-xl, $weight-xs, $line-height-xl);
+        padding: 22px 0;
+    }
+
+    &__item {
+        display: flex;
+        @include font ($size-xl, $weight-xs, $line-height-xl);
+        padding: 0 0 16px 43px;
+        background: url(../img/chek.png) no-repeat left top 8px;
+    }
+}

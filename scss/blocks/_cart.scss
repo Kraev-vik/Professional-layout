@@ -1,0 +1,181 @@
+.cart {
+
+    &__promo {
+        background-color: $rose;
+        min-height: 148px;
+
+        &-title {
+            @include font ($size-xl, $weight-s, 148px, $dark-rose, uppercase);
+        }
+    }
+
+    &__wrap {
+        @include flex (space-between, unset);
+        padding: 96px 0 128px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    &__item {
+        @include flex (flex-start, 32px);
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        position: relative;
+
+        &-remove {
+            @include absolute (28px, 18px, 18px);
+            right: 22px;
+            cursor: pointer;
+        }
+    }
+
+    &__desc {
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 6px;
+            padding: 42px 0;
+
+
+            & li {
+                @include font (22px, $weight-s, 26px, $grey-dark);
+
+                & input {
+                    @include font (18px, $weight-s, 22px, $grey-dark);
+                    margin-left: 25px;
+                    width: 44px;
+                    height: 25px;
+                    border: 1px solid $grey-sub;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__img {
+        width: 262px;
+        height: 306px;
+    }
+
+    &__title {
+        @include font ($size-xl, $weight-s, $line-height-xl, $black, uppercase);
+        width: 262px;
+        margin: 22px 97px 0 0;
+    }
+
+    &__price {
+        color: $dark-rose;
+    }
+
+    &__shopping {
+
+        margin-top: 72px;
+        @include flex (space-between, 185px);
+        align-items: center;
+
+        & button {
+            @include font ($size-s, $weight-xs, $line-height-s, $black, uppercase);
+            width: 234px;
+            height: 49px;
+            border: 1px solid $grey-dark;
+            background-color: transparent;
+            font-family: $site-font;
+            cursor: pointer;
+        }
+
+        & .slill__buy {
+            @include font ($size-s, $weight-xs, $line-height-s, $black, uppercase);
+            width: 234px;
+            height: 49px;
+            border: 1px solid $grey-dark;
+            box-sizing: border-box;
+
+            & a {
+                line-height: 49px;
+                text-align: center;
+                display: block;
+                color: $black;
+            }
+        }
+    }
+
+    &__order {
+        display: flex;
+        flex-direction: column;
+        row-gap: 58px;
+    }
+
+    &__form-title {
+        @include font ($size-m, $weight-xs, $line-height-m, $black, uppercase);
+        margin-bottom: 20px;
+    }
+
+    &__form-box {
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        & input {
+            @include font ($size-xs, $weight-xs, $line-height-xs);
+            width: 360px;
+            height: 45px;
+            box-sizing: border-box;
+            font-family: $site-font;
+            padding: 0 17px;
+            outline-color: $dark-rose;
+            border: 1px solid $grey-dark
+        }
+
+        & button {
+            @include font (11px, $weight-xs, 13px, $black, uppercase);
+            width: 100px;
+            height: 35px;
+            background-color: transparent;
+            border: 1px solid $grey-dark;
+            cursor: pointer;
+        }
+    }
+}
+
+.total {
+    background-color: $grey-sub;
+    padding: 39px 44px 42px 43px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+
+    &__sub-text {
+        @include font (11px, $weight-xs, 13px, $black, uppercase);
+        margin-bottom: 12px;
+    }
+
+    &__sub-price {
+        padding-left: 30px;
+    }
+
+    &__grand-text {
+        @include font ($size-m, $weight-xs, $line-height-m, $black, uppercase);
+        padding-bottom: 21px;
+        margin-bottom: 17px;
+        border-bottom: 1px solid $grey-dark;
+    }
+
+    &__grand-price {
+        @include font ($size-m, $weight-m, $line-height-m, $dark-rose, uppercase);
+        padding-left: 30px;
+    }
+
+    & button {
+        height: 50px;
+        @include font ($size-m, $weight-xs, $line-height-m, $white, uppercase);
+        background-color: $dark-rose;
+        font-family: $site-font;
+        border: none;
+        cursor: pointer;
+    }
+}

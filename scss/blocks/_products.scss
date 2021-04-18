@@ -1,0 +1,93 @@
+.products {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        @include font ($size-2xl, $weight-s, $line-height-2xl);
+    }
+
+    &__subtitle {
+        @include font ($size-s, $weight-s, $line-height-s, $grey);
+        margin-top: 6px;
+    }
+
+    &__list {
+        @include flex;
+        flex-wrap: wrap;
+        margin: 48px 0;
+    }
+
+    &__view-all {
+        width: 211px;
+        height: 47px;
+        border: 1px solid $dark-rose;
+        background: transparent;
+        @include font ($size-m, $weight-s, $line-height-m, $dark-rose);
+        cursor: pointer;
+
+        &:hover {
+            color: $white;
+            background-color: $dark-rose;
+        }
+    }
+}
+
+.product {
+    &__item {
+        max-width: 360px;
+        background-color: $grey-light;
+    }
+
+    &__img {
+        position: relative;
+    }
+
+    &__desc {
+        margin: 25px 18px 20px 18px;
+    }
+
+    &__title {
+        @include font ($size-xs, $weight-s, $line-height-xs, $black, uppercase);
+    }
+
+    &__about {
+        @include font ($size-s, $weight-xs, $line-height-s, $grey-dark);
+        margin: 13px 0 18px 0;
+    }
+
+    &__price {
+        @include font ($size-m, $weight-s, $line-height-m, $dark-rose);
+    }
+
+    &__buy {
+        @include absolute (0, 100%, 100%);
+        left: 0;
+        display: none;
+        background: rgba(58, 56, 56, 0.86);
+    }
+
+    &__img:hover &__buy,
+    &__img:focus &__buy {
+        display: flex;
+    }
+}
+
+.buy-btn {
+    @include font ($size-s, $weight-s, $line-height-s, $white);
+    margin: auto;
+    background: transparent;
+    outline: 1px solid $white;
+    border: none;
+    width: 138px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    & img {
+        width: 26px;
+        height: 24px;
+        padding: 0 10px;
+    }
+}

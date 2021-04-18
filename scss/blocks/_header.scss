@@ -1,0 +1,33 @@
+.header {
+    background-color: $black;
+    min-height: 75px;
+
+    &__list {
+        @include flex (space-between, unset);
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        column-gap: 35px;
+        margin-top: 17px;
+
+        & img {
+            height: 28px;
+        }
+
+        & button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__item-logo img {
+        height: 38px;
+    }
+}
