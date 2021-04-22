@@ -1,0 +1,50 @@
+.categories {
+
+    &__list {
+        @include flex;
+        flex-wrap: wrap;
+        margin: 65px 0 96px 0;
+    }
+
+    &__item {
+        width: 360px;
+        height: 260px;
+
+        &:last-child {
+            flex-grow: 1;
+        }
+
+        &.woman {
+            background-image: url(../img/for-woman.jpg);
+        }
+
+        &.man {
+            background-image: url(../img/for-man.jpg);
+        }
+
+        &.kids {
+            background-image: url(../img/for-kids.jpg);
+        }
+
+        &.accesories {
+            background-image: url(../img/accesories.jpg);
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+
+        &-title {
+            margin: auto;
+            text-align: center;
+            @include font($size-m, $weight-s, $line-height-m, $white, uppercase);
+        }
+
+        &-subtitle {
+            @include font ($size-xl, $weight-m, $line-height-xl, $dark-rose, uppercase);
+        }
+    }
+}

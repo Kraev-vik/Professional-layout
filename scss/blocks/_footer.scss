@@ -1,0 +1,46 @@
+.footer {
+    background-color: $black;
+
+    &__wrap {
+        @include flex (space-between, unset);
+        align-items: center;
+        min-height: 79px;
+    }
+}
+
+.copyright {
+    @include font ($size-m, $weight-s, $line-height-m, $white);
+}
+
+.social-icon {
+
+    &__list {
+        display: flex;
+        column-gap: 7px;
+    }
+
+    &__link {
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+
+        &:hover {
+            background-color: $dark-rose;
+
+            & svg {
+                fill: $white;
+            }
+        }
+
+        & a {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+        }
+
+        & svg {
+            margin: auto;
+        }
+    }
+}

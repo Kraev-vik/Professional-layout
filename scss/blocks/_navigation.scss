@@ -1,0 +1,35 @@
+.navigation {
+    @include absolute (auto, 232px, auto);
+    right: 0;
+    background-color: $white;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+    &__close {
+        @include absolute (16px, auto, auto);
+        right: 16px;
+        cursor: pointer;
+        padding: 5px;
+    }
+
+    &__list:last-child {
+        margin-bottom: 167px;
+    }
+
+    &__heading {
+        @include font ($size-s, $weight-m, $line-height-s, $black, uppercase);
+        margin: 37px 0 0 33px;
+    }
+
+    &__title {
+        @include font ($size-s, $weight-s, $line-height-s, $dark-rose, uppercase);
+        margin: 24px 0 0 33px;
+    }
+
+    &__item a {
+        display: block;
+        width: 100%;
+        @include font ($size-s, $weight-s, $line-height-s, $grey-dark);
+        margin-top: 11px;
+        padding-left: 55px;
+    }
+}

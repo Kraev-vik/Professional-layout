@@ -1,0 +1,29 @@
+.promo {
+    background-color: $rose;
+    display: flex;
+
+    &__img {
+        height: 764px;
+    }
+
+    &__title {
+        @include font ($size-4xl, $weight-l, $line-height-4xl, $black, uppercase);
+        position: relative;
+        margin-top: 290px;
+
+        &::before {
+            @include absolute (0, 12px, 112px);
+            content: '';
+            background-color: $dark-rose;
+            left: -28px;
+        }
+    }
+
+    &__subtitle {
+        @include font ($size-3xl, $weight-m, $line-height-3xl, $black, uppercase);
+    }
+
+    &__subtitle-rose {
+        color: $dark-rose;
+    }
+}
