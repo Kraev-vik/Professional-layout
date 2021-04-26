@@ -1,5 +1,5 @@
 class ProductsList {
-    constructor(container = '.products') {
+    constructor(container = '.products__list') {
         this.container = container;
         this.goods = [];
         this._fetchProducts();
@@ -61,17 +61,27 @@ class ProductItem {
         this.description = product.description;
     }
     render() {
-        return `<div class="product-item">
-                <img src="img/products/${this.id}/preview.jpg" alt="${this.title}">
-                <div class="desc">
-                    <h4>${this.title}</h4>
-                    <p>${this.description}</p>
-                    <p>&#36;${this.price}.00</p>
-                    <button class="buy-btn id${this.id}"><img src="img/basket-icon.svg" alt="Cart">Add to Cart</button>
+        return `<li class="product__item">
+                <img class="product__item__img" src="img/products/${this.id}/preview.jpg" alt="${this.title}">
+                <div class="product__item__desc">
+                    <h3 class="product__item__title">${this.title}</h3>
+                    <p class="product__item__about">${this.description}</p>
+                    <p class="product__item__price">&#36;${this.price}.00</p>
+                    <button class="buy-btn id${this.id} visually-hidden"><img src="img/basket-icon.svg" alt="Cart">Add to Cart</button>
                 </div>
-            </div>`
+            </li>`
     }
 }
 
 let list = new ProductsList();
 list.render();
+
+
+//hiding navigation
+document.querySelector('.navigation__close').addEventListener("click", () => {
+    document.querySelector('.navigation').classList.add('visually-hidden');
+});
+//visible navigation
+document.querySelector('.burger').addEventListener("click", () => {
+    document.querySelector('.navigation').classList.remove('visually-hidden');
+});
