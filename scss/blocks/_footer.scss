@@ -5,11 +5,21 @@
         @include flex (space-between, unset);
         align-items: center;
         min-height: 79px;
+        @include mobil {
+            flex-direction: column-reverse;
+        }
     }
 }
 
 .copyright {
     @include font ($size-m, $weight-s, $line-height-m, $white);
+    @include desktop {
+        padding-left: 14px;
+    }
+    @include mobil {
+        padding-left: 0;
+        margin-bottom: 9px;
+    }
 }
 
 .social-icon {
@@ -17,6 +27,13 @@
     &__list {
         display: flex;
         column-gap: 7px;
+        @include desktop {
+            padding-right: 14px;
+        }
+        @include mobil {
+            padding-right: 0;
+            margin: 43px 0 40px 0;
+        }
     }
 
     &__link {
