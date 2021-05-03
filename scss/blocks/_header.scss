@@ -4,6 +4,12 @@
 
     &__list {
         @include flex (space-between, unset);
+        @include desktop {
+            padding: 0 14px;
+        }
+        @include mobil {
+            padding: 0 7px;
+        }
     }
 
     &__item {
@@ -11,9 +17,19 @@
         align-items: flex-end;
         column-gap: 35px;
         margin-top: 17px;
+        @include tablet {
+            column-gap: 41px;
+        }
 
         & img {
             height: 28px;
+            -webkit-transition: -webkit-transform .6s ease-in-out;
+            transition: transform .6s ease-in-out;
+
+            &:hover{
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
         }
 
         & button {
@@ -29,5 +45,17 @@
 
     &__item-logo img {
         height: 38px;
+    }
+
+    &__reg {
+        @include mobil {
+            display: none;
+        }
+    }
+
+    &__cart{
+        @include mobil {
+            display: none;
+        }
     }
 }

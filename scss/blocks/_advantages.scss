@@ -2,25 +2,41 @@
     background-color: $black;
 
     &__list {
-        @include flex;
-        min-height: 341px;
+        @include flex (space-between, 2.75%);
         margin-top: 95px;
+        @include tablet {
+            flex-direction: column;
+            gap: 48px;
+            margin-top: 65px;
+            padding: 48px 0 64px 0;
+        }
+        @include mobil {
+            padding: 48px 0 81px 0;
+        }
     }
 
     &__item {
-        width: 360px;
+        width: 31.5%;
         color: $white;
         text-align: center;
-        margin: auto;
+        margin: 103px auto;
+        @include tablet {
+            width: 47%;
+            margin: 0 auto;
+        }
+        @include mobil {
+            width: 100%;
+            padding: 14px;
+        }
     }
 
     &__title {
-        @include font ($size-l, $weight-l, $line-height-l, $white);
+        @include font ($size-l, $weight-m, $line-height-l, $white);
         margin: 28px 0 16px 0;
     }
 
     &__desc {
-        @include font ($size-s, $weight-s, $line-height-s, $white);
+        @include font ($size-s, $weight-xs, $line-height-s, $white);
         font-style: normal;
         padding: 0 30px;
     }
