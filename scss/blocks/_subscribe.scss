@@ -1,48 +1,23 @@
 .subscribe {
     background-image: url(../img/subscribe-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    @include tablet {
-        background-size: cover;
-    }
 
     &__list {
         @include flex (space-around, unset);
         min-height: 448px;
-        @include tablet {
-            flex-direction: column;
-            align-items: center;
-        }
     }
 
     &__item {
-        width: 31.5%;
+        width: 360px;
         display: flex;
         align-items: center;
         flex-direction: column;
-        @include tablet {
-            width: 47%;
-        }
-        @include mobil {
-            width: 100%;
-            padding: 14px;
-        }
 
         &.quote {
             margin-top: 97px;
-            @include tablet {
-                margin-top: 54px;
-            }
         }
 
         &.frm {
             margin-top: 150px;
-            @include tablet {
-                margin: 54px 0 140px 0;
-            }
-            @include mobil {
-                margin-bottom: 109px;
-            }
         }
     }
 
@@ -69,10 +44,6 @@
     &__form {
         margin-top: 32px;
         display: flex;
-        @include mobil {
-            width: 90%;
-            justify-content: center;
-        }
 
         &-mail {
             width: 224px;

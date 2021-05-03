@@ -1,56 +1,26 @@
 .promo {
     background-color: $rose;
     display: flex;
-    @include mobil {
-        min-height: 363px;
-        justify-content: center;
-    }
 
     &__img {
-        width: 60%;
-        min-height: 764px;
-        @include tablet {
-        min-height: 368px;
-    }
-        @include mobil{
-            display: none;
-        }
+        height: 764px;
     }
 
     &__title {
         @include font ($size-4xl, $weight-l, $line-height-4xl, $black, uppercase);
         position: relative;
         margin-top: 290px;
-        @include tablet {
-            @include font (44px, $weight-l, 52px, $black, uppercase);
-            margin-top: 138px;
-        }
-        @include mobil {
-            @include font (38px, $weight-l, 45px, $black, uppercase);
-        }
 
         &::before {
             @include absolute (0, 12px, 112px);
             content: '';
             background-color: $dark-rose;
             left: -28px;
-            @include tablet {
-                height: 102px;
-            }
-            @include mobil {
-                height: 92px;
-            }
         }
     }
 
     &__subtitle {
         @include font ($size-3xl, $weight-m, $line-height-3xl, $black, uppercase);
-        @include tablet {
-            @include font ($size-2xl, $weight-m, $line-height-2xl, $black, uppercase);
-        }
-        @include mobil {
-            @include font ($size-xl, $weight-m, $line-height-xl, $black, uppercase);
-        }
     }
 
     &__subtitle-rose {

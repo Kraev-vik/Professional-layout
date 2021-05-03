@@ -5,15 +5,8 @@ body {
 }
 
 .container {
-    width: 1140px;
+    max-width: 1140px;
     margin: 0 auto;
-
-    @include desktop {
-      width: 96%;
-    }
-
-    @include mobil {
-    }
 }
 
 .visually-hidden {

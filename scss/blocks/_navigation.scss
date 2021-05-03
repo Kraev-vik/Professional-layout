@@ -1,7 +1,6 @@
 .navigation {
     @include absolute (auto, 232px, auto);
     right: 0;
-    z-index: 1;
     background-color: $white;
     box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
 

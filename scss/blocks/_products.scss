@@ -13,20 +13,9 @@
     }
 
     &__list {
-        display: grid;
-        justify-content: space-between;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-gap: 2.75%;
-        grid-row-gap: 30px;
+        @include flex;
+        flex-wrap: wrap;
         margin: 48px 0;
-        @include tablet {
-            gap: 16px 2.2%;
-            grid-template-columns: repeat(2, 1fr);
-        }
-        @include mobil {
-            grid-template-columns: repeat(1, 1fr);
-            gap: 16px;
-        }
     }
 
     &__view-all {
@@ -46,15 +35,12 @@
 
 .product {
     &__item {
+        max-width: 360px;
         background-color: $grey-light;
     }
 
     &__img {
         position: relative;
-
-        & img {
-            width: 100%;
-        }
     }
 
     &__desc {
@@ -77,15 +63,13 @@
     &__buy {
         @include absolute (0, 100%, 100%);
         left: 0;
-        display: flex;
-        opacity: 0;
+        display: none;
         background: rgba(58, 56, 56, 0.86);
-        -webkit-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
+    }
 
-        &:hover{
-            opacity: unset;
-        }
+    &__img:hover &__buy,
+    &__img:focus &__buy {
+        display: flex;
     }
 }
 

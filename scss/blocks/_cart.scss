@@ -12,21 +12,6 @@
     &__wrap {
         @include flex (space-between, unset);
         padding: 96px 0 128px 0;
-        @include desktop {
-            flex-direction: column;
-            row-gap: 65px;
-            padding: 60px 0 147px 0;
-        }
-        @include mobil {
-            padding: 40px 0 96px 0;
-        }
-    }
-
-    &__box {
-        width: 57%;
-        @include desktop {
-            width: 100%;
-        }
     }
 
     &__list {
@@ -54,46 +39,18 @@
             flex-direction: column;
             row-gap: 6px;
             padding: 42px 0;
-            @include desktop {
-                padding: 35px 0;
-                row-gap: 5px;
-            }
-            @include tablet {
-                padding: 15px 0;
-                row-gap: 4px;
-            }
-            @include mobil {
-                padding: 5px 0;
-                row-gap: 3px;
-            }
 
 
             & li {
                 @include font (22px, $weight-s, 26px, $grey-dark);
-                @include tablet {
-                    @include font (18px, $weight-s, 22px, $grey-dark);
-                }
-                @include mobil {
-                    @include font (16px, $weight-s, 19px, $grey-dark);
-                }
 
                 & input {
-                    @include font (20px, $weight-s, 24px, $grey-dark);
+                    @include font (18px, $weight-s, 22px, $grey-dark);
                     margin-left: 25px;
                     width: 44px;
                     height: 25px;
                     border: 1px solid $grey-sub;
                     text-align: center;
-                    @include tablet {
-                        @include font (18px, $weight-s, 22px, $grey-dark);
-                        height: 20px;
-                        width: 35px;
-                    }
-                    @include mobil {
-                        @include font (16px, $weight-s, 19px, $grey-dark);
-                        height: 16px;
-                        width: 27px;
-                    }
                 }
             }
         }
@@ -102,26 +59,12 @@
     &__img {
         width: 262px;
         height: 306px;
-        @include tablet {
-            width: 30.5%;
-            height: 100%;
-        }
-        @include mobil {
-            width: 35%;
-        }
     }
 
     &__title {
         @include font ($size-xl, $weight-s, $line-height-xl, $black, uppercase);
-        margin-top: 22px;
-        @include tablet {
-            margin-top: 10px;
-            @include font ($size-l, $weight-s, $line-height-l, $black, uppercase);
-        }
-        @include mobil {
-            margin-top: 3px;
-            @include font ($size-m, $weight-s, $line-height-m, $black, uppercase);
-        }
+        width: 262px;
+        margin: 22px 97px 0 0;
     }
 
     &__price {
@@ -133,10 +76,6 @@
         margin-top: 72px;
         @include flex (space-between, 185px);
         align-items: center;
-        @include desktop {
-            justify-content: center;
-            gap: 50px;
-        }
 
         & button {
             @include font ($size-s, $weight-xs, $line-height-s, $black, uppercase);
@@ -168,15 +107,6 @@
         display: flex;
         flex-direction: column;
         row-gap: 58px;
-        width: 31.5%;
-        @include desktop {
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        @include mobil {
-            flex-direction: column;
-        }
     }
 
     &__form-title {
@@ -184,24 +114,15 @@
         margin-bottom: 20px;
     }
 
-    &__form {
-        @include desktop {
-            width: 49%;
-        }
-        @include mobil {
-            width: 100%;
-        }
-    }
-
     &__form-box {
 
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        row-gap: 20px;
 
         & input {
             @include font ($size-xs, $weight-xs, $line-height-xs);
-            width: 100%;
+            width: 360px;
             height: 45px;
             box-sizing: border-box;
             font-family: $site-font;
@@ -227,13 +148,6 @@
     display: flex;
     flex-direction: column;
     text-align: end;
-    @include desktop {
-        width: 49%;
-        box-sizing: border-box;
-    }
-    @include mobil {
-        width: 100%;
-    }
 
     &__sub-text {
         @include font (11px, $weight-xs, 13px, $black, uppercase);
