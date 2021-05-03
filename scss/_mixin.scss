@@ -18,3 +18,21 @@
     justify-content: $justify-content;
     gap: $gap;
 }
+
+@mixin desktop {
+    @media screen and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin mobil {
+    @media screen and (max-width: $mobil-width) {
+        @content;
+    }
+}
